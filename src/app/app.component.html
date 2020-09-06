@@ -1,0 +1,26 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<form #registrationForm = 'ngForm' (ngSubmit)='register(registrationForm)'>
+  <div>
+      <label>name </label>
+  <input type='text' name = 'username' required ngModel>
+  </div>
+<div>
+  <label>password </label>
+  <input type='text' name = 'password' required ngModel>
+</div>
+  <div>
+    <label>gender | </label>
+    <label>male </label><input type='radio' name = 'gender' value="male" required ngModel >
+    <label>Female </label><input type='radio' name = 'gender' value="female" required ngModel >
+  </div>
+  <div>
+    <button type="submit" >Register</button>
+  </div>
+</form>
+{{registrationForm.value | json}}
+  
+
